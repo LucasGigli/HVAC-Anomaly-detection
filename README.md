@@ -23,19 +23,10 @@ This project uses a statistical approach based on the Z-score to flag abnormal b
 
 ---
 
-## Results
-
-- Z-score effectively identified spikes and drops in sensor data
-- Rolling mean and standard deviation helped smooth the data and enhance anomaly visibility
-- Visualizations clearly showed detected anomalies over time
-
----
-
 ## Repository Contents
 
 - `HVAC_Anomaly_Detection.ipynb` – Full workflow: data loading, processing, Z-score computation, and visualization
 - `data/` – Contains the sample HVAC dataset used in the notebook
-- `requirements.txt` – Required Python packages
 
 ---
 
@@ -43,4 +34,4 @@ This project uses a statistical approach based on the Z-score to flag abnormal b
 
 - Simulated HVAC sensor log
 - Feature: `Temperature` over time
-- Labels: Not required (unsupervised anomaly detection)
+Dataset available at: https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption
