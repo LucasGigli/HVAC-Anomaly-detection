@@ -34,4 +34,4 @@ This project uses a statistical approach based on the Z-score to flag abnormal b
 
 - Simulated HVAC sensor log
 - Feature: `Temperature` over time
-Dataset available at: https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption
+- Dataset available at: https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption
