@@ -1,50 +1,46 @@
-# HVAC Anomaly Detection with Supervised Learning
+# HVAC Anomaly Detection with Z-Score Method
 
-This project applies supervised machine learning to detect anomalies in HVAC (Heating, Ventilation, and Air Conditioning) systems using real-time sensor data. It was developed as part of a practical exploration into time series classification and anomaly detection techniques.
+This project focuses on detecting anomalies in HVAC (Heating, Ventilation, and Air Conditioning) systems using statistical methods. It was developed as a practical implementation of anomaly detection for sensor-based time series data.
 
 ---
 
 ## Why This Project
 
-HVAC systems play a crucial role in environmental control, but anomalies such as mechanical faults or inefficient energy usage can go undetected without proper monitoring. Traditional threshold-based systems lack adaptability.
+HVAC systems are critical for regulating indoor environments. Malfunctions, inefficiencies, or sensor failures often go unnoticed until major breakdowns occur. Early anomaly detection can help optimize energy use, reduce costs, and prevent equipment damage.
 
-This project uses data-driven models to learn patterns of normal behavior and flag unusual deviations that may signal faults or inefficiencies.
+This project uses a statistical approach based on the Z-score to flag abnormal behavior in sensor readings.
 
 ---
 
-## Key Components
+## Methodology
 
-| Component              | Description |
+| Step                  | Description |
 |------------------------|-------------|
-| Sensor Data            | Includes temperature, humidity, airflow, and energy metrics |
-| Feature Engineering    | Rolling means, standard deviation, lag features, and z-scores |
-| Data Preprocessing     | Handling missing values, normalization, and noise smoothing |
-| Supervised Models      | Logistic Regression, Random Forest, XGBoost for classification |
+| Data Source           | Simulated sensor readings from an HVAC unit |
+| Feature Focus         | Temperature sensor time series |
+| Anomaly Detection     | Z-score computed on rolling windows |
+| Thresholding          | Observations with Z-scores beyond a set threshold are flagged as anomalies |
 
 ---
 
 ## Results
 
-- Achieved high accuracy in flagging known anomalies  
-- Time-windowed statistical features improved detection performance  
-- Easily extendable to real-world industrial and commercial HVAC systems
+- Z-score effectively identified spikes and drops in sensor data
+- Rolling mean and standard deviation helped smooth the data and enhance anomaly visibility
+- Visualizations clearly showed detected anomalies over time
 
 ---
 
 ## Repository Contents
 
-- `main_notebook.ipynb` – Full workflow: data preparation, feature engineering, modeling
-- `data/` – Sample HVAC datasets (simulated or anonymized)
-- `requirements.txt` – Python dependencies used
+- `HVAC_Anomaly_Detection.ipynb` – Full workflow: data loading, processing, Z-score computation, and visualization
+- `data/` – Contains the sample HVAC dataset used in the notebook
+- `requirements.txt` – Required Python packages
 
 ---
 
 ## Dataset
 
-- Simulated or real sensor logs from HVAC systems  
-- Features: temperature, humidity, energy use, flow rate, timestamp  
-- Labels: 0 = normal, 1 = anomaly
-- Dataset available at:
-https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption
-
-Developed as part of a practical project in anomaly detection and time series analysis.
+- Simulated HVAC sensor log
+- Feature: `Temperature` over time
+- Labels: Not required (unsupervised anomaly detection)
